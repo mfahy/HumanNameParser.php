@@ -149,9 +149,11 @@ class HumanNameParser_Parser {
 
 		// get the last name
 		$this->last = $this->name->chopWithRegex($lastRegex, 0);
-		if (!$this->last){
-			throw new Exception("Couldn't find a last name in '{$this->name->getStr()}'.");
-		}
+		
+		// I'm ok with the darkness...
+		//if (!$this->last){
+		//	throw new Exception("Couldn't find a last name in '{$this->name->getStr()}'.");
+		//}
 
 		// get the first name
 		$this->first = $this->name->chopWithRegex($firstRegex, 0);
